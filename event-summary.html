@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM Summary</title>
+</head>
+
+<body>
+    <h1>Final DOM Event Handlers</h1>
+    <h3 id="handler-status"> defaul text</h3>
+    <p id="input-text-didplay">Defaul input text</p>
+    <input id="input-uodate" type="text">
+    <button id="btn-update">Update</button>
+    <br>
+    <br>
+    <button onclick="makeonclick()">handle Event by Add onclick Function</button>
+    <button id="event-handeler">Handlers events by addEventLestener</button>
+    <script>
+        function makeonclick() {
+            const defaulHandler = document.getElementById('handler-status')
+            defaulHandler.innerText = 'i am so happy is a handlers menu card'
+        }
+        // option : 2
+        document.getElementById('event-handeler').addEventListener('click', function () {
+            const defaulHandler = document.getElementById('handler-status')
+            defaulHandler.innerText = ' veent decoretion'
+        })
+
+        document.getElementById('btn-update').addEventListener('click', function () {
+            const inputField = document.getElementById('input-uodate')
+            const inputtext = inputField.value;
+
+            const p = document.getElementById('input-text-didplay')
+            p.innerText = inputtext;
+            inputField.value = '';
+        })
+    </script>
+</body>
+
+</html>
