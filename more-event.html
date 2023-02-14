@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Event</title>
+</head>
+
+<body>
+    <h1>Exam ple foucash</h1>
+    <button id="btn-more">Exam</button>
+    <input id="text-field" type="text">
+    <script>
+        // document.getElementById('text-field').addEventListener('click ', function () {
+        //     console.log('khuv interest ey ')
+        // })
+        // document.getElementById('text-field').addEventListener('blur', function () {
+        //     console.log('khuv interest ey ')
+        // })            
+        // document.getElementById('text-field').addEventListener('keydown', function (event) {
+        //     console.log(event.target);
+        // })
+        // document.getElementById('text-field').addEventListener('keydown', function (event) {
+        //     console.log(event.target.value);
+        // })
+        document.getElementById('text-field').addEventListener('keyup', function (event) {
+            console.log(event.target.value);
+        })
+        document.getElementById('btn-more').addEventListener('mousemove', function () {
+            console.log('i am so happy');
+        })
+    </script>
+</body>
+
+</html>

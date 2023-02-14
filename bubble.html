@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble Mia</title>
+    <style>
+        body {
+            border: 2px solid rgba(4, 27, 235, 0.954);
+        }
+
+        section {
+            border: 2px solid rebeccapurple;
+        }
+
+        #item-2 {
+            border: 2px solid green;
+        }
+
+        ul {
+            border: 2px solid red;
+        }
+    </style>
+</head>
+
+<body id="body">
+    <!-- ul>li#item-$*6>lorem2 -->
+    <h1>Exploring Event Bubble</h1>
+    <section id="list-container">
+        <ul id="list-ul">
+            <li id="item-1">Lorem, ipsum.</li>
+            <li id="item-2">Beatae, labore!</li>
+            <li id="item-3">Nihil, iste.</li>
+            <li id="item-4">Voluptates, quod.</li>
+            <li id="item-5">Repudiandae, temporibus.</li>
+            <li id="item-6">Laborum, consequuntur?</li>
+        </ul>
+    </section>
+    <script>
+        document.getElementById('item-2').addEventListener('click', function (event) {
+            console.log('Item 2 click');
+            // event.stopPropagation();
+            event.stopImmediatePropagation();
+        })
+        document.getElementById('item-2').addEventListener('click', function (event) {
+            console.log('Item 2 click');
+            // event.stopPropagation();
+
+        })
+        document.getElementById('item-2').addEventListener('click', function (event) {
+            console.log('Item 2 click');
+            // event.stopPropagation();
+        })
+        document.getElementById('item-2').addEventListener('click', function (event) {
+            console.log('Item 2 click');
+            // event.stopPropagation();
+        })
+        document.getElementById('list-ul').addEventListener('click', function () {
+            console.log('ul click');
+        })
+        document.getElementById('list-container').addEventListener('click', function () {
+            console.log('section container click');
+        })
+        document.getElementById('list-container').addEventListener('click', function () {
+            console.log('open the html click');
+        })
+    </script>
+</body>
+
+</html>

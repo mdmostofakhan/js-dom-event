@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1b id="secret-info">My secret info</h1>
+        <br>
+        <input id="delet-confirom" type="text" placeholder=" please type delete">
+        <button id="btn-Delete" disabled>delet</button>
+        <script>
+            document.getElementById('delete-confirom').addEventListener('keyup', function (event) {
+                const text = event.target.value;
+                const deletinfo = document.getElementById('btn-Delete');
+                if (text === 'delete') {
+                    deletinfo.removeAttribute('disbled');
+                }
+                else {
+                    deletinfo.setAttribute('disbled', true);
+                }
+            })
+            document.getElementById('btn-Delete').addEventListener('click', function () {
+                const secret = document.getElementById('secret-info');
+                secret.style.display = 'none'
+
+            })
+        </script>
+</body>
+
+</html>
